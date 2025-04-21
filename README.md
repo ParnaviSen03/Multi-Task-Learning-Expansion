@@ -30,6 +30,7 @@ Developed as part of a take-home assessment to demonstrate transformer-based mod
 - Freeze BERT layers 0–6 and fine-tune layers 7–11 + task heads.
 - Leverages general language features while adapting higher layers to new tasks.
 
+*Further technical insights and rationale for these decisions are provided in the notebook (Task 3 section).*
 ###  Task 4: Training Loop & Visualization
 - Implemented a training loop using PyTorch with joint optimization for both tasks.
 - Used `CrossEntropyLoss` and `Adam` optimizer.
@@ -80,7 +81,6 @@ pip install -r requirements.txt
 ####  Prerequisites
 - Docker installed on your machine ([Install Docker](https://docs.docker.com/get-docker/))
 
----
 ####  Steps to Run the Project
 
 ##### 1. Clone the Repository
