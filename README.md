@@ -67,13 +67,47 @@ Plots are included at the end of the notebook.
 
 ##  How to Run
 
-###  Option 1: Run the Notebook Locally
+###  Option 1: Run the Notebook Locally(Without docker)
 
 1. Install all required dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+2. Launch the notebook.
 
-2. Launch the notebook:
+### Option 2: Run the Notebook in docker
+####  Prerequisites
+- Docker installed on your machine ([Install Docker](https://docs.docker.com/get-docker/))
 
-jupyter notebook multitask_training.ipynb
+---
+####  Steps to Run the Project
+
+##### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
+```
+
+##### 2. Build the Docker Image
+```bash
+docker build -t jupyter-ml-app .
+```
+
+
+##### 3. Run the Docker Container
+```bash
+docker run -p 8888:8888 jupyter-ml-app
+```
+
+##### 4. Access Jupyter Notebook in Browser
+
+Once the container is running, check your terminal for a URL that looks like this:
+
+```
+http://127.0.0.1:8888/?token=<your-token>
+```
+
+Open it in your browser to access the notebook interface.
+
+---
